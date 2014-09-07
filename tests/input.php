@@ -10,7 +10,10 @@ class EchoReceiver implements CommandReceiverInterface
     {
         $parser = new Browphper\SymbolLocation\SymbolDescriptorParser();
         $descriptor = $parser->parse($command->getArguments()[0]);
-        var_dump($descriptor);
+        $locator = new Browphper\SymbolLocation\Locator();
+        $locator->locate($descriptor)
+            ->ifHasValue('var_dump')
+            ->ifNull(function () { echo 'No result' . PHP_EOL; });
     }
 
     public function exitAsked(Command $command)
