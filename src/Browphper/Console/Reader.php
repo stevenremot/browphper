@@ -34,7 +34,11 @@ class Reader
         $continue = true;
         while ($continue) {
             $line = $this->input->getLine();
-            $continue = $this->inputListener->processLine($line);
+            if ($this->inputListener->exitAsked($line)) {
+                $continue = false;
+            } else {
+                $this->inputListener->processLine($line);
+            }
         }
     }
 }

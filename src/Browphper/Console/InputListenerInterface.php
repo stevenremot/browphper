@@ -9,11 +9,14 @@ interface InputListenerInterface
     /**
      * Process the new line input in the console
      *
-     * Return false if repl must stop, true otherwise.
-     *
      * @param string $input
      *
-     * @return boolean
+     * @return void
      */
     public function processLine($line);
+
+    /**
+     * Return whether this line asks exit or not.
+     */
+    public function exitAsked($line);
 }
