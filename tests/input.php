@@ -25,6 +25,7 @@ class EchoReceiver implements CommandReceiverInterface
 $dispatcher = new Browphper\Console\Command\Dispatcher(
     array(
         'echo' => new EchoReceiver,
+        'locate' => new Browphper\SymbolLocation\CommandReceiver,
         'exit' => new Browphper\Console\Command\ExitReceiver
     )
 );
