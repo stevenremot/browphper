@@ -1,4 +1,4 @@
-# Brophper - PHP Code browser
+# Browphper - PHP Code browser
 
 ## Description
 
