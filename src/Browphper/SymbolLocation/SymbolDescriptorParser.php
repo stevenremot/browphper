@@ -22,7 +22,7 @@ class SymbolDescriptorParser
             throw new Exception('Could not get symbol from input "' . $input . '"');
         }
 
-        $className = trim($input[0]);
+        $className = trim($parts[0]);
         $descriptor = new TypeDescriptor($className);
 
         if (count($parts) > 1) {

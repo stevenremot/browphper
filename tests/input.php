@@ -4,19 +4,6 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use Browphper\Console\Command;
 use Browphper\Console\Command\ReceiverInterface as CommandReceiverInterface;
 
-class ExitReceiver implements CommandReceiverInterface
-{
-    public function processCommand(Command $command)
-    {
-        return;
-    }
-
-    public function exitAsked(Command $command)
-    {
-        return true;
-    }
-}
-
 class EchoReceiver implements CommandReceiverInterface
 {
     public function processCommand(Command $command)
@@ -35,7 +22,7 @@ class EchoReceiver implements CommandReceiverInterface
 $dispatcher = new Browphper\Console\Command\Dispatcher(
     array(
         'echo' => new EchoReceiver,
-        'exit' => new ExitReceiver
+        'exit' => new Browphper\Console\Command\ExitReceiver
     )
 );
 
