@@ -1,0 +1,10 @@
+{
+    "name": "stevenremot/browphper",
+    "description": "A PHP code browser in command line",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Browphper\\": "src/Browphper"
+        }
+    }
+}
