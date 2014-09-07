@@ -30,8 +30,9 @@ require_once __DIR__ . DIRECTORY_SEPARATOR .
     'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 ```
 
-The command-line programm is `bin/browphper`. Don't move it, but
-launch it in your project's directory (or one of its subdirectories).
+The command-line program is `bin/browphper`. Don't move it, but launch
+it in your project's directory (or one of its subdirectories). It will
+execute configuration file, and start a repl.
 
 You can then enter commands in the formats `<command name> [argument]*`.
 
