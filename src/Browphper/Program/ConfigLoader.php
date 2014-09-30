@@ -9,13 +9,19 @@ namespace Browphper\Program;
 class ConfigLoader
 {
     const CONF_FILE_NAME = '.browphper.php';
+    
     /**
-     * Find an run configuration and load it if any.
+     * Find and run configuration and load it if any.
      *
-     * The configuration is a file names .browphper.php that must be
-     * placed at the root of the project.
+     * Browse the given directory to search a browphper configuration file. If
+     * it could not find one, try again in the parent directory until file
+     * system root is reached.
      *
-     * @param string $currentDirectory
+     * The configuration is a file named .browphper.php. It should be placed
+     * at the root of the PHP Project.
+     *
+     * @param string $currentDirectory Current directory. Search begins from
+     *                                 this path.
      *
      * @return boolean true if it could load a configuration
      */
