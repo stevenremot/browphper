@@ -1,10 +1,20 @@
 {
-    "name": "stevenremot/browphper",
-    "description": "A PHP code browser in command line",
+    "name": "steven.remot/browphper",
+    "description": "A PHP Code navigation tool",
+    "require-dev": {
+        "atoum/atoum": "dev-master"
+    },
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Steven Rémot",
+            "email": "steven.remot@gmail.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Browphper\\": "src/Browphper"
         }
-    }
+    },
+    "require": {}
 }
